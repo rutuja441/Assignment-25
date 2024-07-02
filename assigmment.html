@@ -6,6 +6,53 @@
     <title>Events in JS</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    
+<body onload="load()">
+    <div class="container">
+    <div class="card">
+        <textarea class="textbox" type="text" onkeypress="keyPress()" onkeydown="keyDown()" onkeyup="keyUp()"
+            onchange="change()"> </textarea>
+        <div>
+            <button class="btn" onclick="console.log('Button 1')"> Click Me!!</button>
+            <button class="btn" ondblclick="console.log('Button 2')">Double Click Me!!</button>
+        </div>
+    </div>
+
+    <div class="box" onmouseover="onmouseOver()" onmouseout="onmouseOut()" onmousemove="onmouseMove()">
+        <span class="box-text">Mouse Events</span>
+    </div>
+    </div>
+    <script>
+        function keyPress() {
+            console.log("Key pressed!");
+        }
+
+        function keyDown() {
+            console.log(`key Down!`)
+        }
+
+        function keyUp() {
+            console.log(`key up!`)
+        }
+
+        function change() {
+            console.log(`change`)
+        }
+
+        function onmouseOver() {
+            console.log(`Mouse on the circle`);
+        }
+
+        function onmouseOut() {
+            console.log(`Mouse out from the circle`);
+        }
+
+        function onmouseMove() {
+            const number = Math.random();
+            console.log(`Mouse moving on circle ${number}`);
+        }
+
+        function load(){
+            alert("Page Loading Completed...")
+        }
+    </script>
 </body>
